@@ -1,0 +1,44 @@
+/*Quita los bordes de la pagina y configuracion Inicial*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/Puente\ Alto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.formulario{
+    background: rgba(0, 0, 0, .5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568) ;
+    color: white;
+
+}
+.Olvide{
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+}
+.Regis{
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+}
+
+.Olvide:hover{
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+.Regis:hover{
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+    cursor: pointer;
+}
