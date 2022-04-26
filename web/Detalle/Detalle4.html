@@ -9,6 +9,7 @@
     <title>Detalle</title>
     <!-- Libreria Bootstrap CSS-->
     <link rel="stylesheet" href="../../libs/BootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/calendar.css">
 </head>
 
 <body>
@@ -35,8 +36,131 @@
 
     <!--Separador-->
     <div class="separador text-center">
-        <h1> Solicitud N°123325</h1>
+        <h1> Solicitud N°123132</h1>
     </div>
+
+    <!-- Material -->
+    <div class="card  text-center col-lg-8" style="margin: auto;">
+        <table class="table table-secondary table-hover table-borderless">
+            <thead>
+                <tr class="table-secondary">
+                    <th scope="col">Alumno : Jorge Tapia</th>
+                    <th scope="col">RUT : 19.920.573-0</th>
+                    <th scope="col">Carrera : Ingeniería en Informática</th>
+                    <th scope="col">Fecha : 17/04/2022 </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <!-- Comentario-->
+    <Div class="container overflow-hidden ">
+        <div class="row pt-3 justify-content-evenly">
+            <div class="form-floating col-sm-4" style="margin-top: 5%;">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 100px"></textarea>
+                <label for="floatingTextarea2 text-center"> Necesito Justificar mi falta de asistencia a clases y
+                    pruebas
+                </label>
+            </div>
+            <!--Tabla Asignatura-->
+            <div class="card  text-center col-lg-5">
+                <div class="card-body">
+                    <p class="card-text">Asignatura</p>
+                </div>
+                <table class="table table-secondary table-hover table-striped table-bordered">
+                    <thead>
+                        <tr class="table-dark">
+                            <th scope="col">Asignatura</th>
+                            <th scope="col">Seccion</th>
+                            <th scope="col">Profesor</th>
+                            <th scope="col">Días</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>EMP1101</th>
+                            <td>004D</td>
+                            <td>Jaime Henriquez</td>
+                            <td>Lunes</td>
+                        </tr>
+                        <tr>
+                            <th>PGY3121</th>
+                            <td>008D</td>
+                            <td>Freddy Campos</td>
+                            <td>Martes / Jueves</td>
+                        </tr>
+                        <tr>
+                            <th>APY3461</th>
+                            <td>004D</td>
+                            <td>Pedro Bobadilla</td>
+                            <td>Miercoles</td>
+                        </tr>
+                        <tr>
+                            <th>PRY311</th>
+                            <td>001D</td>
+                            <td>Mauricio Lagos</td>
+                            <td>Viernes</td>
+                        </tr>
+                        <tr>
+                            <th>MDY3131</th>
+                            <td>005D</td>
+                            <td>Freddy Campos</td>
+                            <td>Miercoles / Viernes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row pt-3 justify-content-evenly">
+            <div class="col-lg-4 " style="margin-top: -10%;">
+                <!--Calendario-->
+                <div class="root">
+                    <div class="calendar" id="calendar">
+
+                    </div>
+
+                    <div class="calendar" id="calendar2">
+
+                    </div>
+                </div>
+                <script type="text/javascript"
+                    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+                <script type="text/javascript"
+                    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+                <script type="text/javascript" src="../../js/calendar.js"></script>
+                <script type="text/javascript">
+                    let calendar = new Calendar('calendar');
+                    calendar.getElement().addEventListener('change', e => {
+                        console.log(calendar.value().format('LLL'));
+                    });
+
+                    let calendar2 = new Calendar('calendar2');
+                    calendar2.getElement().addEventListener('change', e => {
+                        console.log(calendar2.value().format('LLL'));
+                    });
+                </script>
+            </div>
+            <div class="col-lg-5">
+                <div class="card">
+                    <img src="../../img/certificado.PNG" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 10%;">
+            <div class="form-floating col-sm-4">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 100px"></textarea>
+                <label for="floatingTextarea2 text-center"> Alumno Presenta excelentes documentos
+                </label>
+            </div>
+            <div class="d-grid gap-2 d-md-block pt-3" style="margin-left: 5%;">
+                <button class="btn btn-secondary" type="submit">Aceptar</button>
+                <button class="btn btn-secondary" type="button">Rechazar</button>
+            </div>
+        </div>
+
+    </Div>
 
     <!-- footer-->
 
