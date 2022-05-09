@@ -1,0 +1,112 @@
+input [type="date"]{
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #007bff;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 90%;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 999;
+    border: none;
+    outline: none;
+    }
+    
+    input:focus{
+      border: 5px solid #0c5460;  
+    }
+    
+    input [type="date"]::-webkit-calender-picker-indicator{
+      opacity: 0;
+    }
+
+    
+.cuadrado {
+  width: 500px;
+  height: 200px;
+  background: #bd5d38;
+  position: fixed;
+  left: 200px; 
+  top: 150px;
+}
+
+.rectangulo {
+  width: 1250px;
+  height: 500px;
+  background: #007bff;
+  position: fixed;
+  left: 50px; 
+  top: 70px;
+}
+
+.cuadrado2 {
+  width: 600px;
+  height: 350px;
+  position: absolute;
+  right: 1px; 
+  top: 135px;
+}
+
+.cuadrado2 iframe{
+  width: 80%;
+  height: 40vh;
+}
+
+.cuadrado2 input {
+  color: #FFF;
+}
+
+.cuadrado textarea{
+  width: 50px;
+  top: 1000px;
+}
+
+/* For mobile phones: */
+[class*="colo-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .colo-s-1 {width: 8.33%;}
+  .colo-s-2 {width: 16.66%;}
+  .colo-s-3 {width: 25%;}
+  .colo-s-4 {width: 33.33%;}
+  .colo-s-5 {width: 41.66%;}
+  .colo-s-6 {width: 50%;}
+  .colo-s-7 {width: 58.33%;}
+  .colo-s-8 {width: 66.66%;}
+  .colo-s-9 {width: 75%;}
+  .colo-s-10 {width: 83.33%;}
+  .colo-s-11 {width: 91.66%;}
+  .colo-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .colo-1 {width: 8.33%;}
+  .colo-2 {width: 16.66%;}
+  .colo-3 {width: 25%;}
+  .colo-4 {width: 33.33%;}
+  .colo-5 {width: 41.66%;}
+  .colo-6 {width: 50%;}
+  .colo-7 {width: 58.33%;}
+  .colo-8 {width: 66.66%;}
+  .colo-9 {width: 75%;}
+  .colo-10 {width: 83.33%;}
+  .colo-11 {width: 91.66%;}
+  .colo-12 {width: 100%;}
+}
+
+.caja {
+  margin-top: 4%;
+   margin-left: 2%;
+}
+
+.caja textarea{
+  width: 50%;
+  
+}

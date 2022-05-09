@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/Duoc Uc.png">
-    <title>Estadisticas</title>
+    <title>Justificar Asistencia</title>
     <!-- Libreria Bootstrap CSS-->
     <link rel="stylesheet" href="../libs/BootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/calendarioA.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">   
+
 </head>
 
 <body>
@@ -44,14 +47,69 @@
 
     <!--Separador-->
     <div class="separador text-center">
-        <h1> Justificativos Por Carrera </h1>
+        <h1> Justificar Asistencia </h1>
     </div>
+    
+ <!--Justificar Asistencia-->
+ <div class="colo-12 colo-s-12 caja" >
+    <tr>
+        <td>
+            <h4 tyle="color: #dc3545">Breve comentario:</h4>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <textarea name="txtComentario" rows="5" required minlength="2"></textarea>
+        </td>
+    </tr>           
+</div>
 
-    <!--Graficos-->
+<!--Fecha de justificativo-->
+<div style="margin-top: 1%; margin-left: 2%;">
+    <tr>
+    <td>
+        <label for="lblFechaInicio">Ingresar Fecha de Inicio:</label>
+    </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="date" name="fechaInicio" id="">
+            
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="lblFechaTermino">Ingresar Fecha de Termino:</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="date" name="fechaTermino" id="">
+        </td>
+    </tr>
+</div>
+
+<!--Archivo PDF,JPG, png, etc...-->
+<div class="cuadrado2" style="margin-top: 2%; margin-left: 2%;">
+    <td>
+        <h4 tyle="color: #dc3545">Cargar Justificativo</h4>
+    </td>
+    <tr>
+        <td>
+            <iframe src="..\img\FormularioDuplo.pdf" frameborder="0"> </iframe>
+            <input type="file" name="justificativo" id="">
+        </td>
+    </tr>
+</div>
+
+<div class="d-grid gap-2 d-md-block pt-3" style="margin-left: 5%; ">
+    <button class="btn btn-secondary" type="submit">Enviar</button>
+</div>
 
       <!-- footer-->
 
-  <footer class="bg-dark text-white pt-5 pb-3">
+  <footer class="bg-dark text-white pt-5 pb-3" style="margin-top: 10%;">
     <hr class="mb-4">
 
     <div class="container text-center text-md-left">
