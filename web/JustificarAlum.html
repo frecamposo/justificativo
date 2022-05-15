@@ -9,11 +9,12 @@
     <title>Justifica Duoc</title>
     <!-- Libreria Bootstrap CSS-->
     <link rel="stylesheet" href="../libs/BootStrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/Justificativos.css">
+    <link rel="stylesheet" href="../css/calendarioA.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+
 </head>
 
 <body>
-
     <!-- Barra de Navegacion -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
@@ -29,10 +30,10 @@
                         <a class="nav-link" aria-current="page" href="../web/HomeAlumno.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../web/JustificarAlum.html">Justificar</a>
+                        <a class="nav-link active" href="../web/JustificarAlum.html">Justificar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  active" href="../web/EstadoJustificativo.html">Estado</a>
+                        <a class="nav-link " href="../web/EstadoJustificativo.html">Estado</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="Login.html">Cerrar Sesion</a>
@@ -44,58 +45,65 @@
 
     <!--Separador-->
     <div class="separador text-center">
-        <h1> Estado de Justificativos</h1>
+        <h1> Justificar Asistencia </h1>
     </div>
 
-    <!--Tablas de justificativos-->
-    <table class="table table-secondary table-hover table-striped table-bordered">
-        <thead>
-            <tr class="table-dark">
-                <th scope="col">Solicitud</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Estado</th>
-                <th scope="col">Detalle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>N°123132</th>
-                <td>17/04/2022</td>
-                <td>Aprobada</td>
-                <td><a href="Detalle/DetalleAlumno.html">Ver</a></td>
-            </tr>
-            <tr>
-                <th>N°123352</th>
-                <td>17/04/2022</td>
-                <td>Aprobada</td>
-                <td><a href="#">Ver</a></td>
-            </tr>
-            <tr>
-                <th>N°123365</th>
-                <td>17/04/2022</td>
-                <td>Aprobada</td>
-                <td><a href="#">Ver</a></td>
-            </tr>
-            <tr>
-                <th>N°123325</th>
-                <td>17/04/2022</td>
-                <td>Rechazada</td>
-                <td><a href="#">Ver</a></td>
-            </tr>
-            <tr>
-                <th>N°145776</th>
-                <td>17/04/2022</td>
-                <td>Pendiente</td>
-                <td><a href="#">Ver</a></td>
-            </tr>
-            <tr>
-                <th>N°134654</th>
-                <td>17/04/2022</td>
-                <td>Pendiente</td>
-                <td><a href="#">Ver</a></td>
-            </tr>
-        </tbody>
-    </table>
+    <!--Justificar Asistencia-->
+
+    <div class="container">
+        <div class="row">
+            <!--Columna Izquierda-->
+            <div class="col-md-6 mt-5">
+                <!--Archivo PDF,JPG, png, etc...-->
+                <div class="card text-center">
+                    <p class="card-text mt-3">Cargar Justificativo</p>
+                    <iframe src="..\img\FormularioDuplo.pdf" frameborder="0"> </iframe>
+                    <div class="mt-3">
+                        <input type="file" name="justificativo" id="">
+                    </div>
+                    <div class="mt-3"></div>
+                </div>
+            </div>
+
+            <!--Columna Derecha-->
+            <div class="col-md-6 mt-5">
+                <div class="card text-center">
+                    <!--Comentario de alumno-->
+                    <p class="card-text mt-3">Comentario Alumno</p>
+                    <div class="form-floating ">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                            style="height: 100px">
+                        </textarea>
+                    </div>
+                    <!--Fecha Inasistencia-->
+                    <div>
+                        <tr>
+                            <td>
+                                <label for="lblFechaInicio">Ingresar Fecha de Inicio:</label> <input type="date"
+                                    name="fechaInicio" id="">
+                            </td>
+                        </tr>
+                    </div>
+                    <div>
+                        <tr>
+                            <td>
+                                <label for="lblFechaTermino">Ingresar Fecha de Termino:</label> <input type="date"
+                                    name="fechaTermino" id="">
+                            </td>
+                        </tr>
+                    </div>
+                    <!--Boton de Envio-->
+                    <div class="d-grid gap-3 pt-3">
+                        <button class="btn btn-secondary" style="background-color: darkcyan;"
+                            type="submit">Enviar</button>
+                    </div>
+                    <div class="mt-3"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 
     <!-- footer-->
 
@@ -141,8 +149,10 @@
         </div>
 
     </footer>
+
     <!--Libreria Bootstrap JS-->
     <script src="../libs/BootStrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
