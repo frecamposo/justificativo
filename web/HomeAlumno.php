@@ -1,3 +1,28 @@
+<?php
+ini_set('session.gc_maxlifetime', 7200);
+session_start();
+?>
+
+<?php
+
+include '../clases/conexion.php';
+
+$user = $_SESSION["user"];
+//Probar la conexion, debe traer el rut
+//echo "<h1>usuario:".$user."</h1>";
+
+if($user==''){
+  header("Location: ../web/Login.html");
+
+}
+$sql = "select * from alumnos_2022_1 where rut_alumno='$user'";
+$resp = mysqli_query($cone, $sql);
+while ($f = mysqli_fetch_array($resp)) {
+  $nombre = $f[1];
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

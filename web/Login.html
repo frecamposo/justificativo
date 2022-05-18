@@ -7,28 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/Duoc Uc.png">
     <title>Justificativos</title>
-    <!--Libreria Bootstrap-->
-    <link rel="stylesheet" href="../css/Login.css">
-    <link rel="stylesheet" href="../libs/BootStrap/css/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <script src="sw_alert/sweetalert2.all.min.js"></script>
+        <!--Libreria Bootstrap-->
+        <link rel="stylesheet" href="../css/Login.css">
+        <link rel="stylesheet" href="../libs/BootStrap/css/bootstrap.min.css">
 </head>
 
 <body>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnRec").click(function(){
+                var x=$("#txtUsuario").val().trim().length;
+                alert(x);
+                if(x>0){
+                    $.ajax({
+                       url:'../clases/recupera.php',
+                       method:'POST',
+                       data:"txtUsuario="+$("#txtUsuario").val(),
+                       success: function(data){
+                           alert(data);
+                           Swal.fire({
+                                icon: 'info',
+                                title: 'Recuperacion de Contrasena',
+                                text: 'A su correo registrado le llegara una contraseña provisoria, que luego debera cambiar. Si presenta algun tipo de problema, contáctese a soporte@encuestatempranapa.cl'
+                              });
+                        }
+                    });
+                }else{
+                    alert(data);
+                    Swal.fire({
+                                icon: 'error',
+                                title: 'Recuperacion Contrasena',
+                                text: 'verifique su nombre de usuario, no hay nada'
+                              });
+                };
+            });
+        });
+    </script>
     <div class="container">
-        <script>
-            function validarLogin() {
-                let usu = document.getElementById("txtUsuario").value;
-                let pass = document.getElementById("txtPass").value;
-                if (usu.trim().length <= 3 || pass.trim().length <= 3) {
-                    return false;
-                }
-                return true;
-                document.location.href = "HomeAlumno.html";
-            }
-        </script>
-
         <div class="row justify-content-center pt-5 mt-5 mr-1">
             <div class="col-md-4 formulario">
-                <form action="" method="post" onsubmit="return validarLogin()">
+                <form action="../clases/valida.php" method="POST">
                     <div class="form-group text-center pt-3">
                         <h1 class="text-light">INICIAR SESIÓN</h1>
                     </div>
@@ -38,7 +63,7 @@
                     </div>
                     <div class="form-group mx-sm-4 pt-3">
                         <input type="password" class="form-control" name="txtPass" id="txtPass"
-                            placeholder="Ingrese Su Contraseña">
+                            placeholder="Ingrese Su Contraseña" maxlength="45">
                     </div>
                     <div class="d-grid gap-3 pt-3">
                         <button class="btn btn-secondary" type="submit">INGRESAR</button>
@@ -59,6 +84,7 @@
 
     <!--Libreria Bootstrap JS-->
     <script src="../libs/BootStrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

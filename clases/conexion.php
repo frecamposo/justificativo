@@ -3,5 +3,5 @@
 $host="localhost";
 $user="root";
 $pass="";
-$base="sepuen_encuesta";
+$base="justificar_asistencia";
 $cone= mysqli_connect($host, $user, $pass, $base);
